@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <title>OMACASE: Optical Map Toolkit</title>
+        <link rel="icon" type="image/x-icon" href="/_favicon.ico?v=2.1.0">
+        <link rel="stylesheet" href="/assets/css/00_bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/01_omacase.css">
+    </head>
+    <body>  
+        <div id="react-entry-point">
+            <div>
+                <header id='omacase-header'>
+                    {% block header %}
+                    <div>
+                        <h1 id="home_logo"><a id="home_logo_link" href="/">OMACASE</a></h1>
+                        <p id="slogan">Optical mapping QC & repeat calling toolkit</p>
+                    </div>
+                    {% endblock %}
+                </header>
+                {% block body %}{{ page_content }}{% endblock %}
+            </div>
+        </div>
+        <footer class="footer-print">
+            {% block footer %}
+            Copyright © 2022 Claire Chung
+            <a id="cuhk_link" href="https://www.cuhk.edu.hk">CUHK</a>
+            <a id="ominfo_link" href="https://www.opticalmapping.info">OMInfo</a>
+            <cite><a id="cite_link" href="/dummy-cite-link">Cite</a></cite>
+            {% endblock %}
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+## Web app settings
+PORT                =   8050
+MAX_DATASETS        =   5
+
+## Viewer settings
+MAPS_PER_PAGE       =   10
+REPEAT_ONLY         =   true
+MAX_X               =   1e6
+DEFAULT_COLORSCHEME =   'buttercup'
+
+## Repeat calling parameters
+MAX_DIFF            =   800
+MAX_DIFF_RATIO      =   0.08
+MAX_AVG_DIFF        =   750
+MAX_AVG_DIFF_RATIO  =   0.05
+K                   =   13
+MIN_COPY_NUM        =   5
+MIN_SEG_LEN         =   500
+MIN_CASETTE_LENGTH  =   3000
+MAX_MISSED_LABEL    =   1
+
+## Log settings
+VERBOSE             =   1

@@ -1,0 +1,2 @@
+myst_parser         >=0.17.0
+renku-sphinx-theme  >=0.2.2

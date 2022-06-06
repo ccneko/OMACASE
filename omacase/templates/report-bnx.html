@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% block body %}
+<div id="report_body" class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="col-12 h2-print">Dataset Summary</h2>
+                <div id="opmaps_summary_div">
+                    {% block opmaps_summary_div_open_tag %}
+                    <div id="opmaps_summary" class="dash-table-container opmaps_summary_print-bnx" style="position: relative;">
+                    {% endblock %}
+                        <div class="dash-spreadsheet-container dash-spreadsheet dash-no-filter dash-fill-width" style="width: 100%;">
+                            <table class="cell-table-print">
+                                <tbody>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Report generation datetime</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ time_now }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Filename</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ filename }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>File type</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ file_format }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>File format version</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ file_version }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Label motif</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ motif }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Map number</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ map_num }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Total length</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ total_length }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>N50 length (bp)</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ n50 }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>L50 value</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ l50 }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>N90 length (bp)</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ n90 }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>L90 value</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ l90 }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Max length (bp)</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ max_length }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Min length (bp)</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ min_length }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Label density / 100 kbp</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ label_density }}</div>
+                                        </td>
+                                    </tr>
+                                    {% block bnx_metrics %}
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Mean of mol-average label SNR</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ qx11_avg }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print" data-dash-column="Item" data-dash-row="16">
+                                            <div>SD of mol-average label SNR</div>
+                                        </td>
+                                        <td class="table-cell-print" data-dash-column="Dataset value" data-dash-row="16">
+                                            <div>{{ qx11_sd }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Mean of mol-average label intensity</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ qx12_avg }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>SD of mol-average label intensity</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ qx12_sd }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>Mean of mol-average mol SNR</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ mol_snr_avg }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print">
+                                            <div>SD of mol-average mol SNR</div>
+                                        </td>
+                                        <td class="table-cell-print" data-dash-column="Dataset value" data-dash-row="20">
+                                            <div>{{ mol_snr_sd }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print" data-dash-column="Item" data-dash-row="21">
+                                            <div>Mean of mol-average mol intensity</div>
+                                        </td>
+                                        <td class="table-cell-print" data-dash-column="Dataset value" data-dash-row="21">
+                                            <div>{{ mol_intensity_avg }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell-print" data-dash-column="Item" data-dash-row="22">
+                                            <div>SD of mol-average mol intensity</div>
+                                        </td>
+                                        <td class="table-cell-print">
+                                            <div>{{ mol_intensity_sd }}</div>
+                                        </td>
+                                    </tr>
+                                    {% endblock %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        {% block map_metric_plots %}
+        <div class="plots">
+            <div class="row">
+                <h2 class="col-12 h2-print">Map length statistics</h2>
+            </div>
+            
+            <div class="row">
+                <h3 class="col-6">Map length histogram</h3>
+                <div class="col-6">
+
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-12">Pink: 20-150 kbp; Yellow: 150-220 kbp; Green: >220 kbp</p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img id="map_len_hist" src="{{ map_len_hist_src }}">
+                </div>
+                <div class="col-6">
+                    <img id="n_metrics_hist" src="{{ n_metrics_hist_src }}">
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="col-12 h2-print">Map quality statistics (Labels)</h2>
+            </div>
+            <div class="row">
+                <h3 class="col-6">Per molecule label SNR</h3>
+                <h3 class="col-6">Per molecule label intensity</h3>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img id="qx11_plot" src="{{ qx11_plot_src }}">
+                </div>
+                <div class="col-6">
+                    <img id="qx12_plot" src="{{ qx12_plot_src }}">
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="col-12 h2-print">Map quality statistics (Molecule)</h2>
+            </div>
+            <div class="row">
+                <h3 class="col-6">Per molecule backbone SNR</h3>
+                <h3 class="col-6">Per molecule backbone intensity</h3>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img id="mol_snr_plot" src="{{ mol_snr_plot_src }}">
+                </div>
+                <div class="col-6">
+                    <img id="mol_inten_plot" src="{{ mol_inten_plot_src }}">
+                </div>
+            </div>
+            <div class="row bnx-print-report-last-row">
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    <div class="col-1"></div>
+</div>
+{% endblock %}

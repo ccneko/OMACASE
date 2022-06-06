@@ -1,0 +1,639 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    OMACASE
+Version:    0.2.1
+Author:     Claire
+-------------------------------------------------------------------*/
+
+/*---- general start ----*/
+.hidden {
+    display: none
+}
+
+.nav {
+    z-index: 999;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0.5rem auto;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 88px;
+}
+
+/*----  general end  ----*/
+
+/*---- header start ----*/
+#omacase-header {
+    z-index: 999;
+    background-color: #9a97d8;
+    color: #110f12;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    height: 88px;
+}
+
+#home_logo_link {
+    color: #3c0850;
+    text-decoration: none;
+}
+
+#omacase-header p {
+    margin: 0;
+}
+/*---- header end ----*/
+
+/*---- viewer start ----*/
+.control-labels {
+    display: inline-block;
+    padding: 0;
+    font-weight: bold;
+}
+
+#filename {
+    padding: min(10px, 5%);
+}
+
+#viewer_control div.row{
+    padding: 0 2rem;
+}
+
+#viewer_control div {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0.25rem 0;
+    border: 0;
+    margin: 0;
+}
+
+#prev_page {
+    min-width: 4rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
+#next_page {
+    min-width: 4rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#pagination div.li-separator {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+#pagination div:nth-child(2) input {
+    display: inline-block;
+    width: 30%;
+}
+
+#page input:invalid {
+    border-color: #dc3545;
+}
+
+#total_page {
+    margin-right: 1rem;
+}
+
+#pagination div:nth-child(3) input {
+    width: 50%;
+}
+
+#pagination div:nth-child(4) input {
+    display: inline-block;
+    width: 45%;
+}
+
+#repeat_only {
+    margin-right: 0.5rem;
+}
+
+#custom_omids {
+    width: 80%;
+    margin-right: 0.5rem;
+}
+
+#reverse .btn.btn-secondary {
+    background-color: #fff;
+    color: #6c757d
+}
+
+#reverse .btn.btn-secondary.active{
+    background-color: #6c757d !important;
+    color: #fff !important;
+}
+
+input[type=radio] {
+    display:none;
+}
+
+.radio_group {
+	cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 1.2rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    background-color: #eee;
+    color: #6c757d;
+}
+
+.radio_group input + label:first-of-type {
+	border-top-left-radius: .25rem;
+	border-bottom-left-radius: .25rem;
+	-webkit-border-top-left-radius: .25rem;
+	-webkit-border-bottom-left-radius: .25rem;
+	-o-border-top-left-radius: .25rem;
+	-o-border-bottom-left-radius: .25rem;
+	-moz-border-top-left-radius: .25rem;
+	-moz-border-bottom-left-radius: .25rem;
+}
+
+.radio_group input + label:last-of-type {
+	border-top-right-radius: .25rem;
+	border-bottom-right-radius: .25rem;
+	-webkit-border-top-right-radius: .25rem;
+	-webkit-border-bottom-right-radius: .25rem;
+	-o-border-top-right-radius: .25rem;
+	-o-border-bottom-right-radius: .25rem;
+	-moz-border-top-right-radius: .25rem;
+	-moz-border-bottom-right-radius: .25rem;
+}
+
+.radio_group input:checked + label { 
+	background-color: #6c757d;
+	color: #fff;
+}
+
+#omviewer {
+    margin: 0.5rem 0 0 0;
+}
+/*------------ Viewer End ------------*/
+
+/*-------- Summary table Start -------*/
+#opmaps_summary {    
+    color: slategrey;
+    font-size: 1.5em;
+}
+#opmaps_summary tr:first-child {    
+    display: none
+}
+#opmaps_summary div.dash-spreadsheet-menu {
+    display: none;
+}
+#opmaps_summary .dt-table-container__row-0 {
+    display: none;
+}
+/*--------- Summary table End --------*/
+/*-------- Plotly plots Start --------*/
+div.js-plotly-plot {
+    margin-bottom:  1.2em;
+}
+/*-------- Plotly plots End ----------*/
+/*----------- Footer  Start ----------*/
+footer {
+    padding: 2rem 1rem 0 1rem;
+    margin: 1rem 0 0 0;
+    bottom: 0;
+}
+
+.cmap-print-report-last-row {
+    margin-bottom: 10rem;
+}
+
+.bnx-print-report-last-row {
+    margin-bottom: 0;
+}
+
+footer a {
+    font-weight:    normal;
+    color:        #1c0024;
+    margin-top:     0.8em;
+    margin-left:    1em;
+}
+footer a:hover {
+    color:        #9a97d8;
+}
+cite {
+    font-style:     normal;
+}
+/*------------ Footer  End -----------*/
+
+/*------ Dashboard Table Start -------*/
+.opmaps_summary_print-bnx{
+    margin-bottom: 30rem;
+}
+
+.opmaps_summary_print-cmap{
+    margin-bottom: 5rem;
+}
+
+.cell-table-print{
+    padding: 0.2rem 0.5rem;
+}
+
+.table-cell-print {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d3d3;
+}
+
+.h2-print {
+    font-weight: bold;
+}
+
+.sep-row {
+    height: 2rem;
+}
+/*------ Dashboard Table End ---------*/
+
+
+.upload_data_box-padding {
+    font-size: 2rem;
+}
+
+#uploaded-list-box {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 60px;;
+}
+
+#uploaded-list {
+    max-height: min(800px, 80%);
+    overflow: scroll;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 60px;;
+}
+
+.uploaded-list ul {
+    margin: 0;
+    float: left;
+}
+
+.uploaded-list li {
+    list-style-type: none;
+}
+
+.uploaded-list li button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    margin: 0;
+    background-color: transparent;
+    border-color: #1c0024;
+    color: #323232;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.uploaded-list li button:hover, #uploaded-list li button:active, #uploaded-list li button:focus{
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+/*------- Config Editor Start --------*/
+#config_editor {
+    min-height: 400px;
+    width: 100%;
+}
+
+#config_content div.row{
+    padding: 0 2rem;
+    display: block;
+}
+/*-------- Config Editor End ---------*/
+
+/* Below adapted from  https://codepen.io/chriddyp/pen/bWLwgP.css */
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.column,
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+    font-size: 62.5%; 
+}
+body {
+    padding: 0;
+    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1;
+    font-weight: 400;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #323232;
+}
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #2b1f30
+}
+h1 { font-size: 3.5rem; line-height: 1.0;  letter-spacing: -.1rem; margin-bottom: 1rem; font-weight: 600;}
+h2 { font-size: 3.0rem; line-height: 1.0; letter-spacing: -.1rem; margin-bottom: 1.8rem; margin-top: 1.8rem;}
+h3 { font-size: 2.8rem; line-height: 0.8;  letter-spacing: -.1rem; margin-bottom: 1.5rem; margin-top: 1.5rem;}
+h4 { font-size: 2.6rem; line-height: 0.75; letter-spacing: -.08rem; margin-bottom: 1.2rem; margin-top: 1.2rem;}
+h5 { font-size: 2.2rem; line-height: 0.7;  letter-spacing: -.05rem; margin-bottom: 0.6rem; margin-top: 0.6rem;}
+h6 { font-size: 2.0rem; line-height: 0.6;  letter-spacing: 0; margin-bottom: 0.75rem; margin-top: 0.75rem;}
+
+p {
+margin-top: 0; }
+
+a {
+    color: #1EAEDB;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0FA0CE;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn-primary {
+    background-color:#666;
+    border-color: #666;
+}
+.btn-primary:hover {
+    background-color:#2b1f30;
+    border-color: #666;
+}
+.btn-primary.active {
+    background-color:#2b1f30;
+    border-color: #666;
+}
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 20px;
+    color: #555;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: #333;
+    border-color: #888;
+    outline: 0;
+}
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    color: #FFF;
+    background-color: #33C3F0;
+    border-color: #33C3F0;
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+    color: #FFF;
+    background-color: #1EAEDB;
+    border-color: #1EAEDB;
+}
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    height: 38px;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box; 
+    font-family: inherit;
+    font-size: inherit; /*https://stackoverflow.com/questions/6080413/why-doesnt-input-inherit-the-font-from-body*/
+}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0;
+}
+label,
+legend {
+    display: block;
+    margin-bottom: 0px;
+}
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+label > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+    list-style: circle inside;
+}
+ol {
+    list-style: decimal inside;
+}
+ol, ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+}
+li {
+    margin-bottom: 1rem;
+}
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+    border-collapse: collapse;
+}
+th:not(.CalendarDay),
+td:not(.CalendarDay) {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+}
+th:first-child:not(.CalendarDay),
+td:first-child:not(.CalendarDay) {
+    padding-left: 0;
+}
+th:last-child:not(.CalendarDay),
+td:last-child:not(.CalendarDay) {
+    padding-right: 0;
+}
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+    margin-bottom: 0rem;
+}
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom: 0rem;
+}
+pre,
+dl,
+figure,
+table,
+form {
+    margin-bottom: 0rem;
+}
+p,
+ul,
+ol {
+    margin-bottom: 0.75rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+.u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.u-pull-right {
+    float: right;
+}
+.u-pull-left {
+    float: left;
+}
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid #E1E1E1;
+}
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+    content: "";
+    display: table;
+    clear: both;
+}
+
